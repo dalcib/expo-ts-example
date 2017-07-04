@@ -8,7 +8,8 @@
     "react-native-scripts": "0.0.40",
     "react-native-typescript-transformer": "^1.0.11",
     "react-test-renderer": "16.0.0-alpha.12",
-    "tslint-config-prettier": "^1.1.0"
+    "tslint-config-prettier": "^1.1.0",
+    "bunyan": "1.8.10"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
