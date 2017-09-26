@@ -1,15 +1,16 @@
 {
   "name": "expo-ts-example",
-  "version": "0.2.0",
+  "version": "20.0.0",
   "private": true,
   "devDependencies": {
-    "jest-expo": "18.0.0",
-    "jest-expo-ts": "18.0.1",
-    "react-native-scripts": "0.0.40",
-    "react-native-typescript-transformer": "^1.0.11",
+    "jest-expo": "20.0.0",
+    "jest-expo-ts": "20.0.0",
+    "react-native-scripts": "1.3.1",
+    "react-native-typescript-transformer": "^1.1.4",
     "react-test-renderer": "16.0.0-alpha.12",
     "tslint-config-prettier": "^1.1.0",
-    "bunyan": "1.8.10"
+    "tslint-react": "*",
+    "typescript": "*"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -27,9 +28,9 @@
     "@types/react": "^15.0.31",
     "@types/react-native": "^0.44.12",
     "@types/react-test-renderer": "^15.5.1",
-    "expo": "^18.0.2",
+    "expo": "^20.0.0",
     "react": "16.0.0-alpha.12",
-    "react-native": "0.45.1",
+    "react-native": "0.47.0",
     "tslib": "^1.7.1"
   }
 }

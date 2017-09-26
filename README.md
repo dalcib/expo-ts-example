@@ -12,13 +12,13 @@
 app.json
 ```
 {"expo": {
-    "sdkVersion": "18.0.0",
+    "sdkVersion": "20.0.0",
     "packagerOpts": {
       "sourceExts": [
         "ts",
         "tsx"
       ],
-      "transformer": "node_modules/react-native-typescript-transformer"
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
     }
   }
 }
