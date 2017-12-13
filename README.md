@@ -1,7 +1,7 @@
 # create-react-native-app with typescript
 
 ## Install
-`npm i -D react-native-typescript-transformer jest-expo-ts`
+`npm i -D react-native-typescript-transformer ts-jest`
 
 ## Configure Typescript
 `tsc --init`
@@ -27,7 +27,24 @@ app.json
 ## Configure Jest
 package.json
 
-`  "jest": {
-    "preset": "jest-expo-ts"
+```
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "ios.ts",
+      "ios.tsx",
+      "android.ts",
+      "android.tsx"
+    ]
   },
-`
+```
