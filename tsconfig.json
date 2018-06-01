@@ -9,15 +9,16 @@
     "lib": ["dom", "es2015", "es2016"],
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "noEmitHelpers": true,
+    "esModuleInterop": true,
     "importHelpers": true,
     "strict": true,
-    "noImplicitReturns": true
-    //"allowJs": true,
-    ////"inlineSourceMap": true,
-    ////"sourceRoot": "src",
-    //"watch": true.
-    //"noUnusedLocals": true
+
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */
   },
   "exclude": [
     "node_modules",

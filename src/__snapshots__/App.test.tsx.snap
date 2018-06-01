@@ -14,15 +14,13 @@ exports[`renders without crashing 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
-    disabled={false}
     ellipsizeMode="tail"
   >
-    Open up App.ts to start working on your app!!!
+    Open up App.ts to start working on your app!!!!
   </Text>
   <Text
     accessible={true}
     allowFontScaling={true}
-    disabled={false}
     ellipsizeMode="tail"
   >
     Changes you make will automatically reload.
@@ -30,32 +28,14 @@ exports[`renders without crashing 1`] = `
   <Text
     accessible={true}
     allowFontScaling={true}
-    disabled={false}
     ellipsizeMode="tail"
   >
     Shake your phone to open the developer menu.
   </Text>
   <Text
     accessible={true}
-    allowFontScaling={false}
-    disabled={false}
+    allowFontScaling={true}
     ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "color": "#900",
-          "fontSize": 30,
-        },
-        undefined,
-        Object {
-          "fontFamily": "Material Icons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
-      ]
-    }
-  >
-    
-  </Text>
+  />
 </View>
 `;

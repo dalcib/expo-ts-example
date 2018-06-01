@@ -1,6 +1,6 @@
 {
-  "name": "rn23xxx",
-  "version": "0.1.0",
+  "name": "expo-ts-example",
+  "version": "0.27.0",
   "private": true,
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -11,53 +11,43 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "devDependencies": {
-    "@types/jest": "^20.0.2",
-    "@types/react": "^16.0.19",
-    "@types/react-native": "^0.49.5",
-    "@types/react-test-renderer": "^16.0.0",
-    "jest-expo": "23.0.0",
-    "react-native-scripts": "1.8.1",
-    "react-native-typescript-transformer": "*",
-    "react-test-renderer": "16.0.0",
-    "ts-jest": "^21.2.4",
-    "tslint-config-prettier": "*",
-    "typescript": "^2.6.2"
+    "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.16",
+    "@types/react-native": "^0.55.16",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/react-native-vector-icons": "^4.6.1",
+    "jest-expo": "27.0.1",
+    "react-native-scripts": "1.14.0",
+    "react-native-typescript-transformer": "1.2.9",
+    "react-test-renderer": "16.4.0",
+    "ts-jest": "^22.4.6",
+    "tslint-config-prettier": "1.13.0",
+    "typescript": "^2.8.3"
   },
   "dependencies": {
-    "expo": "^23.0.4",
-    "react": "16.0.0",
-    "react-native": "0.50.3",
-    "tslib": "^1.8.0"
+    "babel-jest": "^23.0.1",
+    "expo": "^27.0.2",
+    "react": "16.4.0",
+    "react-native": "0.55.4",
+    "react-native-vector-icons": "^4.6.0",
+    "tslib": "^1.9.2"
   },
   "babel": {
-    "presets": [
-      "babel-preset-expo"
-    ],
-    "env": {
-      "development": {
-        "plugins": [
-          "transform-react-jsx-source"
-        ]
-      }
-    }
+    "presets": ["expo"]
   },
   "jest": {
     "preset": "jest-expo",
     "transform": {
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "ios.ts",
-      "ios.tsx",
-      "android.ts",
-      "android.tsx"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "transformIgnorePatterns": ["<rootDir>/node_modules/react-native-vector-icons"],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    }
   }
 }

@@ -1,18 +1,22 @@
 # create-react-native-app with typescript
 
 ## Install
+
 `npm i -D react-native-typescript-transformer ts-jest`
 
 ## Configure Typescript
+
 `tsc --init`
 
 `npm i -S @types/react @types/react-native @types/react-test-renderer @types/jest`
 
 ## Configure Expo
+
 app.json
+
 ```
 {"expo": {
-    "sdkVersion": "20.0.0",
+    "sdkVersion": "27.0.0",
     "packagerOpts": {
       "sourceExts": [
         "ts",
@@ -25,26 +29,26 @@ app.json
 ```
 
 ## Configure Jest
+
 package.json
 
 ```
+  "babel": {
+    "presets": ["expo"]
+  },
   "jest": {
     "preset": "jest-expo",
     "transform": {
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "ios.ts",
-      "ios.tsx",
-      "android.ts",
-      "android.tsx"
-    ]
-  },
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "transformIgnorePatterns": ["<rootDir>/node_modules/react-native-vector-icons"],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    }
+  }
 ```
