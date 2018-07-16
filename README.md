@@ -8,9 +8,9 @@
 
 `tsc --init`
 
-`npm i -S @types/react @types/react-native @types/react-test-renderer @types/jest`
+`npm i -D @types/react @types/react-native @types/expo @types/expo__vector-icons`
 
-## Configure Expo
+## Configure Typescript for react-native
 
 app.json
 
