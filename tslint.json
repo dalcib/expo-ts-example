@@ -8,6 +8,13 @@
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "rules": {
     "member-access": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "missing-jsdoc": false,
+    "newline-before-return": false,
+    //"no-return-await": true,
+    "interface-name": false,
+    "no-console": false,
+    "no-empty": false,
+    "ordered-imports": false
   }
 }

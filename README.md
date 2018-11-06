@@ -1,8 +1,9 @@
-# create-react-native-app with typescript
+# react-native 0.57.1 app with typescript
 
-## Install
+## See also this repositories:
 
-`npm i -D react-native-typescript-transformer ts-jest`
+- [https://github.com/janaagaard75/expo-and-typescript](https://github.com/janaagaard75/expo-and-typescript)
+- [https://github.com/slorber/expo-typescript](https://github.com/slorber/expo-typescript)
 
 ## Configure Typescript
 
@@ -10,20 +11,33 @@
 
 `npm i -D @types/react @types/react-native @types/expo @types/expo__vector-icons`
 
-## Configure Typescript for react-native
+## Configure Babel
 
-app.json
+babel.config.js
 
 ```
-{"expo": {
-    "sdkVersion": "28.0.0",
-    "packagerOpts": {
-      "sourceExts": [
-        "ts",
-        "tsx"
+module.exports = function(api) {
+  api.cache(true)
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: [
+      [
+        'module-resolver',
+        {
+          extensions: [
+            '.js',
+            '.jsx',
+            '.ts',
+            '.tsx',
+            '.android.js',
+            '.android.tsx',
+            '.ios.js',
+            '.ios.tsx',
+          ],
+          root: ['./src'],
+        },
       ],
-      "transformer": "node_modules/react-native-typescript-transformer/index.js"
-    }
+    ],
   }
 }
 ```
@@ -33,22 +47,7 @@ app.json
 package.json
 
 ```
-  "babel": {
-    "presets": ["expo"]
-  },
   "jest": {
-    "preset": "jest-expo",
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-    "transformIgnorePatterns": ["<rootDir>/node_modules/react-native-vector-icons"],
-    "globals": {
-      "ts-jest": {
-        "useBabelrc": true
-      }
-    }
+    "preset": "jest-expo"
   }
 ```

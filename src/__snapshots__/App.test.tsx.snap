@@ -11,31 +11,16 @@ exports[`renders without crashing 1`] = `
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  >
+  <Text>
     Open up App.ts to start working on your app!!!!
   </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  >
+  <Text>
     Changes you make will automatically reload.
   </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  >
+  <Text>
     Shake your phone to open the developer menu.
   </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-  />
+  <Text />
+  <Text />
 </View>
 `;
